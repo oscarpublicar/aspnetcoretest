@@ -1,14 +1,16 @@
 FROM microsoft/dotnet
 
+# Copy the app
+COPY . /app
 # Set the Working Directory
 WORKDIR /app
 
-# Configure the listening port to 80
-ENV ASPNETCORE_URLS http://*:80
-EXPOSE 80
+RUN dotnet restore
 
-# Copy the app
-COPY . /app
+# Configure the listening port to 80
+#ENV ASPNETCORE_URLS http://*:80
+EXPOSE 5050
+
 
 # Start the app
 ENTRYPOINT dotnet AspNETCoreTest.dll
