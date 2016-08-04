@@ -13,4 +13,4 @@ EXPOSE 5050
 
 
 # Start the app
-ENTRYPOINT dotnet AspNETCoreTest.dll
+CMD ["dotnet", "AspNETCoreTest.dll"]
