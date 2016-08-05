@@ -50,6 +50,7 @@
       "Views",
       "Areas/**/Views",
       "appsettings.json",
+      "hosting.json",
       "web.config",
       "docker-compose.yml",
       "docker-compose.debug.yml",
