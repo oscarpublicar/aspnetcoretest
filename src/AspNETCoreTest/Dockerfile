@@ -1,14 +1,16 @@
 FROM microsoft/dotnet:latest
 
 # Copy the app
-COPY bin/debug/AspNETCoreTest/publish/ /app/
+COPY . /app
+# Set the Working Directory
+WORKDIR /app
 
 RUN dotnet restore
-RUN dotnet publish
+RUN dotnet publish -c release
 # Configure the listening port to 80
 #ENV ASPNETCORE_URLS http://*:80
-EXPOSE 5050
+EXPOSE 5000
 
 
 # Start the app
-ENTRYPOINT dotnet /app/testapp.dll
+ENTRYPOINT dotnet /bin/Release/netcoreapp1.0/publish/AspNETCoreTest.dll
