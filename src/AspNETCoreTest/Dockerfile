@@ -18,7 +18,6 @@ RUN npm install --global gulp
 
 RUN dotnet restore
 RUN dotnet publish -c release
-RUN ll /bin/release/netcoreapp1.0/publish/
 # Configure the listening port to 80
 #ENV ASPNETCORE_URLS http://*:80
 EXPOSE 5000
