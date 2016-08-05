@@ -18,7 +18,8 @@ RUN dotnet restore /app/project.json
 RUN dotnet publish /app/project.json -c release -o /root
 # Configure the listening port to 80
 #ENV ASPNETCORE_URLS http://*:80
-EXPOSE 5000
+EXPOSE 60000
+EXPOSE 60001
 RUN ls /root
 
 # Start the app
