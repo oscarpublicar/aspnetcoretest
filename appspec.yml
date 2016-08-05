@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /tmp/aspnetcore
 hooks:
-  ApplicationStart:
+  BeforeInstall:
     - location: shell/install.sh
       timeout: 3600
       runas: root
