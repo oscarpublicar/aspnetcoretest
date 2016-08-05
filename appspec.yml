@@ -1,9 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: /src/AspNETCoreTest
+  - source: /
     destination: /application
 hooks:
   ApplicationStart:
-    - location: ./shell/install.sh
+    - location: shell/install.sh
       timeout: 3600
+      runas: root
