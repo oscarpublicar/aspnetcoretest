@@ -13,7 +13,6 @@ before_install:
     - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
 
 script:
-	- ls
     #build the image
     - docker build --no-cache -t oscarpublicar/aspnetcoretest ./src/aspnetcoretest/
     #tag the build
