@@ -24,4 +24,4 @@ EXPOSE 5000
 
 
 # Start the app
-ENTRYPOINT dotnet /bin/release/netcoreapp1.0/publish/AspNETCoreTest.dll
+ENTRYPOINT dotnet /app/bin/release/netcoreapp1.0/publish/AspNETCoreTest.dll
