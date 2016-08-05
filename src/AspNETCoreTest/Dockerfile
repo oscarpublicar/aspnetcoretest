@@ -2,8 +2,6 @@ FROM microsoft/dotnet:latest
 
 # Copy the app
 COPY . /app
-# Set the Working Directory
-WORKDIR /app
 
 RUN apt-get update -qq
 RUN apt-get install -y -qq git curl wget
@@ -16,12 +14,12 @@ RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN npm install --global bower
 RUN npm install --global gulp
 
-RUN dotnet restore
-RUN dotnet publish -c release
+RUN dotnet restore /app/project.json
+RUN dotnet publish /app/project.json -c release -o /root
 # Configure the listening port to 80
 #ENV ASPNETCORE_URLS http://*:80
 EXPOSE 5000
-
+RUN ls /root
 
 # Start the app
-ENTRYPOINT dotnet /app/bin/release/netcoreapp1.0/publish/AspNETCoreTest.dll
+ENTRYPOINT dotnet /root/AspNetCORETest.dll
