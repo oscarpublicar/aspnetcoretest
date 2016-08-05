@@ -22,4 +22,4 @@ EXPOSE 5000
 RUN ls /root
 
 # Start the app
-ENTRYPOINT dotnet /root/AspNetCORETest.dll
+ENTRYPOINT dotnet /root/app.dll
