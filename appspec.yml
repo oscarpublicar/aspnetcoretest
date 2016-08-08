@@ -4,11 +4,15 @@ files:
   - source: /
     destination: /tmp/aspnetcore
 hooks:
+  ApplicationStop:
+	- location: shell/stop.sh
+	  timeout: 3600
+	  runas: root
   AfterInstall:
     - location: shell/install.sh
       timeout: 3600
       runas: root
   ApplicationStart:
-    - location: shell/run.sh
+    - location: shell/start.sh
       timeout: 3600
       runas: root

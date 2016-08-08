@@ -5,13 +5,20 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{870D6A10-2346-4F0F-A6AB-1519F06543F4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A783022D-1EF0-4F27-BE58-C116EFABD167}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AspNETCoreTest", "src\AspNETCoreTest\AspNETCoreTest.xproj", "{C0E0E9D1-4732-4821-8384-9167F23F392F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8831FACB-78BC-44DB-87A1-24FF4FCD5837}"
 	ProjectSection(SolutionItems) = preProject
 		.travis.yml = .travis.yml
-		global.json = global.json
+		appspec.yml = appspec.yml
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AspNETCoreTest", "src\AspNETCoreTest\AspNETCoreTest.xproj", "{C0E0E9D1-4732-4821-8384-9167F23F392F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shell", "shell", "{370FF4C4-5945-4465-92FC-CEE749AA5A8D}"
+	ProjectSection(SolutionItems) = preProject
+		shell\install.sh = shell\install.sh
+		shell\start.sh = shell\start.sh
+		shell\stop.sh = shell\stop.sh
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,5 +36,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C0E0E9D1-4732-4821-8384-9167F23F392F} = {870D6A10-2346-4F0F-A6AB-1519F06543F4}
+		{370FF4C4-5945-4465-92FC-CEE749AA5A8D} = {8831FACB-78BC-44DB-87A1-24FF4FCD5837}
 	EndGlobalSection
 EndGlobal
