@@ -15,7 +15,7 @@ namespace AspNETCoreTest.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application modified description page.";
+            ViewData["Message"] = "Your application german description page.";
 
             return View();
         }
